@@ -46,7 +46,7 @@ static void GetVisBuffer(iTJSDispatch2 * obj, tjs_int numsamples,
 	tTJSVariant val[4];
 	tTJSVariant *pval[4] = { val, val +1, val +2, val +3 };
 
-	val[0] = (tjs_int64)(tjs_int)SampleBuffer;
+	val[0] = (tjs_int64)(tjs_intptr_t)SampleBuffer;
 	val[1] = (tjs_int64)numsamples;
 	val[2] = (tjs_int64)channels;
 	val[3] = (tjs_int64)aheadsamples;
